@@ -202,3 +202,30 @@ uint32_t layer_state_set_user(uint32_t state) {
   }
   return state;
 }
+
+
+void eeconfig_init_user(void) {
+    set_unicode_input_mode(UC_LNX);
+    //
+    // This is operating system specific.
+    //
+    //   UC_OSX: MacOS Unicode Hex Input support. Works only up to 0xFFFF.
+    //   Disabled by default.      To enable: go to System Preferences ->
+    //   Keyboard -> Input Sources, and enable Unicode Hex.
+    //
+    //   UC_OSX_RALT: Same as UC_OSX, but sends the Right Alt key for unicode
+    //   input
+    //
+    //   UC_LNX: Unicode input method under Linux. Works up to 0xFFFFF.
+    //   Should work almost anywhere on ibus enabled distros. Without ibus,
+    //   this works under GTK apps, but rarely anywhere else.
+    //
+    //   UC_WIN: (not recommended) Windows built-in Unicode input. To enable:
+    //   create registry key under
+    //   HKEY_CURRENT_USER\Control Panel\Input Method\EnableHexNumpad of type
+    //   REG_SZ called EnableHexNumpad, set its value to 1, and reboot. This
+    //   method is not recommended because of reliability and compatibility
+    //   issue, use WinCompose method below instead.
+    //   UC_WINC: Windows Unicode input using WinCompose. Requires WinCompose.
+    //   Works reliably under many (all?) variations of Windows
+}
