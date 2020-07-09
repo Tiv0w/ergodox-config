@@ -24,7 +24,7 @@ NKRO_ENABLE      = yes # USB Nkey Rollover - if this doesn't work, see here: htt
 
 # Can't use both at the same time
 UNICODE_ENABLE = no # Unicode
-UNICODEMAP_ENABLE = yes # Unicode MAP
+UNICODEMAP_ENABLE = no # Unicode MAP
 
 # SWAP_HANDS_ENABLE= yes # Allow swapping hands of keyboard
 # SLEEP_LED_ENABLE = no
